@@ -21,7 +21,7 @@ const run = app.listen(PORT, () => {
     console.log("server is running!");
 })
 
-app.get('/home', (req, res,next)=>{
-    res.send(home.html);
+app.get('/home', function(req, res) {
+    res.sendFile('views/home.html', {root: __dirname })
 });
 
