@@ -31,6 +31,6 @@ const run = app.listen(PORT, () => {
 })
 
 app.get('/home', (req, res,next)=>{
-    res.send('home.html');
+    res.send(home.html);
 });
 
