@@ -1,0 +1,26 @@
+{
+  "name": "hackcu_2021_sevens",
+  "version": "1.0.0",
+  "description": "Repository for HackCU in Spring of 2021, team Sevens.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Spacener/HackCU_2021_Sevens.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Spacener/HackCU_2021_Sevens/issues"
+  },
+  "homepage": "https://github.com/Spacener/HackCU_2021_Sevens#readme",
+  "dependencies": {
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "http": "^0.0.1-security",
+    "path": "^0.12.7",
+    "unirest": "^0.6.0"
+  }
+}
