@@ -57,10 +57,12 @@ io.on('connection', function(socket) {
             if (resa.error) throw new Error(resa.error);
             response = resa.body;
 
+            let myReturn = [];
+
             // const ResponseAsJson = JSON.parse(response)
 
             console.log("Length:" + response.info.satcount);
-            let coordsToRespondWith = [[5,5],[10,10]];
+            let coordsToRespondWith = [[50,50],[100,100]];
             socket.emit('satellite data array', coordsToRespondWith);
         })
     })
