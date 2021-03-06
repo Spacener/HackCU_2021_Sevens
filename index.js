@@ -9,12 +9,41 @@ if(process.env.NODE_ENV !== 'production'){
 }
 
 app.get('/', function(req,res){
-    let request = "https://api.n2yo.com/rest/v1/satellite/above/41.702/-76.014/0/70/18/&apiKey=https://api.n2yo.com/" +
-        "rest/v1/satellite/above/41.702/-76.014/0/70/18/&apiKey=" +
-        process.env.SAT_KEY;
-    let hi_api = unirest.get(request);
 
-    res.send(request)
+    let observer_lat, observer_lng, observer_alt, search_radius, category_id;
+
+    observer_lat = 41.702;
+    observer_lng = -76.014;
+    observer_alt = 0;
+    search_radius = 70;
+    category_id = 0;
+
+    var reqa = unirest("GET", "https://api.n2yo.com/rest/v1/satellite/above/" +
+        observer_lat +
+        "/" +
+        observer_lng +
+        "/" +
+        observer_alt +
+        "/" +
+        search_radius +
+        "/" +
+        category_id +
+        "/&apiKey=" +
+        process.env.SAT_KEY);
+
+    // reqa.query({
+    //     "lng": "122.374199",
+    //     "lat": "47.6484346"
+    // });
+
+
+    let response;
+    reqa.end(function (resa) {
+        if (res.error) throw new Error(resa.error);
+        response = resa.body;
+        res.send(response);
+    })
+
 })
 
 const run = app.listen(PORT, () => {
