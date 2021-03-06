@@ -17,7 +17,7 @@
     <title>Satellite Overhead Tracker</title>
 </head>
 
-<body>
+<body style="background: grey">
 <nav class="navbar navbar-expand-sm bg-dark">
 
     <!-- Links -->
@@ -43,50 +43,54 @@
 
 </nav>
 
-<div id="particles-js"></div>
-<script src="particles.js"></script>
+<div id="particles-js">
 
-<div class="container pt-3">
-    <h1 id="colortag">Home Page</h1>
-    <div class="card">
-        <div class="card-body"><p>Are you an amatuer astronomer? If so, do you want to know about the satellites obscuring your path? You are in the right place! Click the Get Started Button below to get information on satellites blocking your way of viewing the cosmos!</p></div>
+    <div class="container pt-3">
+        <h1 id="colortag">Home Page</h1>
+        <div class="card">
+            <div class="card-body"><p>Are you an amatuer astronomer? If so, do you want to know about the satellites obscuring your path? You are in the right place! Click the Get Started Button below to get information on satellites blocking your way of viewing the cosmos!</p></div>
+        </div>
+        <img class="square" src= "../images/GIOVEA_Auto17.jpg" height="450px" width="450px">
     </div>
-    <img class="square" src= "../images/GIOVEA_Auto17.jpg" height="450px" width="450px">
-</div>
-<!-- A grey horizontal navbar that becomes vertical on small screens -->
+    <!-- A grey horizontal navbar that becomes vertical on small screens -->
 
-<div class="container pt-3">
-    <h1 id="colortag">Home Page</h1>
-    <div class="card">
-        <div class="card-body"><p>Are you an amatuer astronomer? If so, do you want to know about the satellites obscuring your path? You are in the right place! Click the Gather Location
-            Button below to get information on satellites blocking your way of viewing the cosmos!</p></div>
+    <div class="container pt-3">
+        <h1 id="colortag">Home Page</h1>
+        <div class="card">
+            <div class="card-body"><p>Are you an amatuer astronomer? If so, do you want to know about the satellites obscuring your path? You are in the right place! Click the Gather Location
+                Button below to get information on satellites blocking your way of viewing the cosmos!</p></div>
+        </div>
+        <p>Would you like to send your location data?</p>
+
+        <button onclick="getLocation()">Gather Location Data</button>
+
+        <p id="demo"></p>
+        <img src= "../images/Geely_Sat.jpg" height="1050px" width="1400px">
     </div>
-    <p>Would you like to send your location data?</p>
-
-    <button onclick="getLocation()">Gather Location Data</button>
-
-    <p id="demo"></p>
-    <img src= "../images/Geely_Sat.jpg" height="1050px" width="1400px">
-</div>
-<!-- A grey horizontal navbar that becomes vertical on small screens -->
+    <!-- A grey horizontal navbar that becomes vertical on small screens -->
 
 
-<script>
-    var x = document.getElementById("demo");
+    <script>
+        var x = document.getElementById("demo");
 
-    function getLocation() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-        } else {
-            x.innerHTML = "Geolocation is not supported by this browser.";
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition);
+            } else {
+                x.innerHTML = "Geolocation is not supported by this browser.";
+            }
         }
-    }
 
-    function showPosition(position) {
-        x.innerHTML = "Your Current Position: <br>Latitude: " + position.coords.latitude +
-            "<br>Longitude: " + position.coords.longitude;
-    }
-</script>
+        function showPosition(position) {
+            x.innerHTML = "Your Current Position: <br>Latitude: " + position.coords.latitude +
+                "<br>Longitude: " + position.coords.longitude;
+        }
+    </script>
+</div>
+
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+
+<script src="scripts/background.js"></script>
 
 </body>
 </html>
