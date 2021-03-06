@@ -3,27 +3,18 @@ var app = express();
 const PORT = process.env.PORT || 3000;
 var unirest = require("unirest");
 
+
+if(process.env.NODE_ENV !== 'production'){
+    require('dotenv').config();
+}
+
 app.get('/', function(req,res){
-    var reqa = unirest("GET", "https://uphere-space1.p.rapidapi.com/user/visible");
+    let request = "https://api.n2yo.com/rest/v1/satellite/above/41.702/-76.014/0/70/18/&apiKey=https://api.n2yo.com/" +
+        "rest/v1/satellite/above/41.702/-76.014/0/70/18/&apiKey=" +
+        process.env.SAT_KEY;
+    let hi_api = unirest.get(request);
 
-    reqa.query({
-        "lng": "122.374199",
-        "lat": "47.6484346"
-    });
-
-    reqa.headers({
-        "x-rapidapi-key": "8ffab72fe1msh1d8c4b5b79c829bp1f9ae7jsn89b1caa76282",
-        "x-rapidapi-host": "uphere-space1.p.rapidapi.com",
-        "useQueryString": true
-    });
-
-    let response;
-    reqa.end(function (resa) {
-        if (res.error) throw new Error(resa.error);
-        response = resa.body;
-        console.log(response);
-    })
-
+    res.send(request)
 })
 
 const run = app.listen(PORT, () => {
