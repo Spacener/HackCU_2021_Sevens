@@ -5,14 +5,14 @@
     <title>p5Test</title>
     <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>
     <script src="/socket.io/socket.io.js"></script>
+    <script src="/scripts/locationGrab.js"></script>
     <script src="/scripts/processingTest.js"></script>
 </head>
 <body>
 
+<div id="container"></div>
 
-
-
-
+<button onclick="getLocation()">Gather Location Data</button>
 <button type="button" onclick="sendData()">Send Data</button>
 </body>
 </html>
