@@ -46,3 +46,7 @@ app.get('/home', function(req, res) {
     res.sendFile('views/home.html', {root: __dirname })
 });
 
+app.get('/aboutus', function(req, res) {
+    res.sendFile('views/aboutus.html', {root: __dirname })
+});
+
