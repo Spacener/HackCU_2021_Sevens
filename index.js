@@ -15,6 +15,12 @@ app.use(express.static(path.join(__dirname,"views")))
 
 app.get('/home', function(req, res) {
     res.sendFile('views/home.html', {root: __dirname })
+
+    /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+    particlesJS.load('particles-js', 'assets/particles.json', function() {
+        console.log('callback - particles.js config loaded');
+    });
+
 });
 
 app.get('/', function(req,res){
