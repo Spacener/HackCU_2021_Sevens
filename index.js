@@ -4,6 +4,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 const unirest = require("unirest");
 const http = require('http').createServer(app);
+// http.listen(process.env.PORT || 3000)
 const io = require('socket.io')(http)
 
 if(process.env.NODE_ENV !== 'production'){
@@ -53,7 +54,7 @@ io.on('connection', function(socket) {
 
         let response;
         reqa.end(function (resa) {
-            if (res.error) throw new Error(resa.error);
+            if (resa.error) throw new Error(resa.error);
             response = resa.body;
 
             // const ResponseAsJson = JSON.parse(response)
@@ -65,7 +66,7 @@ io.on('connection', function(socket) {
     })
 })
 
-const run = app.listen(PORT, () => {
+const run = http.listen(PORT, () => {
     console.log("server is running!");
 })
 
