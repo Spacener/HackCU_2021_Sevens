@@ -9,7 +9,6 @@ if(process.env.NODE_ENV !== 'production'){
 }
 
 app.get('/', function(req,res){
-
     let observer_lat, observer_lng, observer_alt, search_radius, category_id;
 
     observer_lat = 41.702;
@@ -31,19 +30,12 @@ app.get('/', function(req,res){
         "/&apiKey=" +
         process.env.SAT_KEY);
 
-    // reqa.query({
-    //     "lng": "122.374199",
-    //     "lat": "47.6484346"
-    // });
-
-
     let response;
     reqa.end(function (resa) {
         if (res.error) throw new Error(resa.error);
         response = resa.body;
         res.send(response);
     })
-
 })
 
 const run = app.listen(PORT, () => {
