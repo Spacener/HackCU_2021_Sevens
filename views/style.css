@@ -14,7 +14,10 @@ body{
 .panel {
     font-family: 'Source Sans Pro';
     font-size: 1.3em;
-    position: absolute;
+    color: white !important;
+    position: relative;
+    text-align:center;
+    clear:both;
     width: 200px;
     height: 220px;
     background: #eee;
