@@ -2,23 +2,26 @@ var socket = io();
 
 var satData = {};
 
-var data = [];
+var data = new vis.DataSet();
 var graph = null;
 
 function formArrayFromObj(inData) {
     for(let i in inData) {
-        data.push([parseInt(inData[i][0]), parseInt(inData[i][1]), parseInt(inData[i][2])])
+        if(inData[i][2] < 1000000) {
+            data.add({x: inData[i][0], y: inData[i][1], z: inData[i][2]})
+        }
     }
 }
 
-const getName = function(x, y, z) {
-    return satData[x.toString()+y.toString()][3]
+const getName = function(obj) {
+    return satData[obj['x'].toString()+obj['y'].toString()][3]
 };
 
 // Called when the Visualization API is loaded.
 function drawVisualization() {
     // Create and populate a data table.
     formArrayFromObj(satData);
+
 
     // specify options
     var options = {
@@ -30,13 +33,11 @@ function drawVisualization() {
         showShadow: false,
         keepAspectRatio: true,
         verticalRatio: 0.5,
-        showYAxis: false,
-        tooltip: getName,
+        tooltip: getName
     };
 
     // Instantiate our graph object.
     var container = document.getElementById('myGraph');
-
     graph = new vis.Graph3d(container, data, options);
 
 }

@@ -70,7 +70,7 @@ io.on('connection', function(socket) {
                 coord_set.push(response.above[i].satalt);
                 coord_set.push(response.above[i].satname);
 
-                raw_data[(response.above[i].satlat+response.above[i].satlng).toString()]=coord_set;
+                raw_data[(response.above[i].satlat.toString()+response.above[i].satlng.toString())]=coord_set;
             }
             console.timeEnd("processing satellite data")
             socket.emit('satellite data array', raw_data);
