@@ -4,7 +4,7 @@ tsParticles.load("particles-js",
             "color": {
                 "value": "#1e1e1e"
             },
-            "position": "fixed",
+            "position": "",
             "repeat": "no-repeat",
             "size": "cover"
         },
@@ -76,7 +76,7 @@ tsParticles.load("particles-js",
             }
         },
         "interactivity": {
-            "detect_on": "canvas",
+            "detect_on": "window",
             "events": {
                 "onhover": {
                     "enable": true,
