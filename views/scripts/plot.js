@@ -8,7 +8,9 @@ var dmapboxSatData;
 
 var dmapboxUserLocation;
 
-var satcount = 0;
+var sat_count = 0;
+
+var sat_light = 0
 
 function formArrayFromObj(inData) {
     for(let i in inData) {
@@ -23,7 +25,7 @@ function formArrayFromObj(inData) {
         dmapboxSatData['lat'] = scatterSatData['x'];
         dmapboxSatData['z'] = 1;
     }
-    satcount = scatterSatData['x'].length;
+    sat_count = scatterSatData['x'].length;
 }
 
 var layout = {
@@ -138,6 +140,10 @@ function resetAll() {
 }
 
 function drawPlot() {
+    sat_light = sat_count * 2.5
+    document.getElementById('sat_count').innerHTML = sat_count
+    document.getElementById('sat_light').innerHTML = sat_light
+
     var myPlot = document.getElementById('graph');
     Plotly.newPlot('graph', [scatterSatData, scatterUserLocation], layout)
     Plotly.newPlot('heatmap', [dmapboxSatData, dmapboxUserLocation], layout1);
