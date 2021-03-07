@@ -10,7 +10,7 @@ var dmapboxUserLocation;
 
 var sat_count = 0;
 
-var sat_light = 0;
+var sat_light = 0
 
 function formArrayFromObj(inData) {
     for(let i in inData) {
@@ -100,7 +100,7 @@ function resetAll() {
         type: "scatter3d",
         x: [],
         y: [],
-        z: [1],
+        z: new Array(50).fill(1),
         text: ['Your location', 'test'],
         mode: 'markers',
         hoverinfo: "text",
@@ -123,7 +123,7 @@ function resetAll() {
         hoverinfo: 'lat+lon',
         radius: 15,
         autocolorscale: false,
-        // colorscale: [[0, 'rgba(0,255,0,5)'], [1,'rgb(126,201,216)']],        //color scale for the heatmap. 0 is outer color, 1 is inner
+        colorscale: [[0, 'rgb(255,179,116)'], [1,'rgb(219,51,51)']],        //color scale for the heatmap. 0 is outer color, 1 is inner
         showscale: false
     };
 
@@ -131,11 +131,13 @@ function resetAll() {
         type: 'densitymapbox',
         lon: [],
         lat: [],
+        z: [2000],
         name: "Your Location",
         hoverinfo: "name",
-        radius: 30,
-        showscale: false
-        //colorscale: [[0, 'rgb(0,255,0)'], [1, 'rgb(0,255,0)']]            //color scale for the heatmap. 0 is outer color, 1 is inner
+        opacity: 1,
+        radius: 20,
+        showscale: false,
+        colorscale: [[0, 'rgb(0,77,255)'], [1, 'rgb(0,25,255)']]            //color scale for the heatmap. 0 is outer color, 1 is inner
     }
 }
 
@@ -155,8 +157,8 @@ socket.on('satellite data array', function(data){
     resetAll();
     scatterUserLocation['x'].push(userLat);
     scatterUserLocation['y'].push(userLong);
-    dmapboxUserLocation['lat'].push(userLat);
-    dmapboxUserLocation['lon'].push(userLong);
+    dmapboxUserLocation['lat'] = new Array(50).fill(userLat);
+    dmapboxUserLocation['lon'] = new Array(50).fill(userLong);
 
     formArrayFromObj(data);
     drawPlot();
