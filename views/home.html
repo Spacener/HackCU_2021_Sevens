@@ -43,39 +43,66 @@
 
 
 <!--</nav>-->
-
-
-<div id="particles-js">
-</div>
-
-
-<div class="container title">
-   <p>This is a test</p>
-</div>
-
-<div class="container-fluid pt-3 content-1" style="background-color: #D3D3D3">
-    <div class="d-flex justify-content-center">
-        <h1 id="colortag">Home Page</h1>
+<div class="container-fluid particles" style="background-color: rgb(30,30,30)">
+    <div class="text-center panel">
+        <p>START HERE</p>
     </div>
 
-    <button onclick="getLocation()">
-        <p>Get Started</p>
-    </button>
+    <div id="particles-js" style="
+        background-image: url(&quot;&quot;);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: 50% 50%;">
+    </div>
 
-    <div class="card" style="background-color: rgb(190,190,190)">
-        <div class="card-body"><p>Satellite Polution is a growing topic of concern in today's world,
-            with more than 6,000 orbiting artificial entities. Amatuer astronomers, stargazers,
-            and astrophotographers are all concerned about this increasing quantity–but are they inherently obstructive?
-            Satellites can interfere with scientific research, leave streaks on long-exposure images, and needlessly
-            reflect
-            light onto the Earth's surface. <br><br>
-            Are you curious about the satellites currently in your area?
-            You are in the right place! Click below to get information on satellites blocking your viewing the cosmos!
-        </p></div>
+</div>
+
+
+<div class="container-fluid pt-3 content-1" style="background-color: rgb(120, 120, 120)">
+
+    <!--    <button onclick="getLocation()">-->
+    <!--        <p>Get Started</p>-->
+    <!--    </button>-->
+
+    <div class="card-deck mt-4 mb-5">
+
+        <div class="card ml-5 mr-3">
+            <div class="card-body" style="background-color: rgb(220, 220, 220)">
+                <hr/>
+                <p>
+                    Satellite Polution is a growing topic of concern in today's world,
+                    with more than 6,000 orbiting artificial entities. Amatuer astronomers, stargazers,
+                    and astrophotographers are all concerned about this increasing quantity: but are they inherently obstructive?
+                </p>
+            </div>
+        </div>
+
+        <div class="card ml-3 mr-3">
+            <div class="card-body" style="background-color: rgb(220, 220, 220)">
+                <hr/>
+                <p>
+                    Amatuer astronomers, stargazers,
+                    and astrophotographers are all concerned about this increasing quantity: but are they inherently obstructive?
+                    Satellites can interfere with scientific research, leave streaks on long-exposure images, and needlessly reflect
+                    light onto the Earth's surface.
+                </p>
+            </div>
+        </div>
+
+        <div class="card ml-3 mr-5">
+            <div class="card-body" style="background-color: rgb(220, 220, 220)">
+                <hr/>
+                <p>
+                    Are you curious about the satellites currently in your area?
+                    You are in the right place! Click below to get information on satellites blocking your viewing the cosmos!
+                </p>
+            </div>
+        </div>
     </div>
 
     <p id="demo"></p>
-    <img src="../images/Geely_Sat.jpg" height="1050px" width="1400px">
+    <img src= "../images/Geely_Sat.jpg" height="1050px" width="1400px">
+
 </div>
 <!-- A grey horizontal navbar that becomes vertical on small screens -->
 
@@ -98,7 +125,7 @@
 </script>
 </div>
 
-<script src="https://cdn.jsdelivr.net/npm/tsparticles@1.19.2/dist/tsparticles.min.js"></script>
+<script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
 <script src="scripts/background.js"></script>
 
