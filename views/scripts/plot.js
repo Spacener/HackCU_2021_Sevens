@@ -12,7 +12,7 @@ var satcount = 0;
 
 function formArrayFromObj(inData) {
     for(let i in inData) {
-        if (inData[i][2] < 100000000000) {
+        if (inData[i][2] < 1000000000 && (Math.abs(inData[i][1] - scatterUserLocation['y'][0])) < 70) {
             scatterSatData['x'].push(inData[i][0]);
             scatterSatData['y'].push(inData[i][1]);
             scatterSatData['z'].push(inData[i][2]);
@@ -37,17 +37,24 @@ var layout = {
         zaxis: {
             type: 'log',
             autorange: true,
-            title: 'Kilometers from surface'
+            title: 'Kilometers from surface',
+            color: '#fff'
         },
         xaxis: {
-            title: 'Longitude'
+            autorange: false,
+            range: [-90, 90],
+            title: 'Latitude',
+            color: '#fff'
         },
         yaxis: {
-            title: 'Latitude'
+            autorange: false,
+            range: [-180, 180],
+            title: 'Longitude',
+            color: '#fff'
         }
     },
     showlegend: false,
-    paper_bgcolor: "#aeaeae",           //background color of the whole plot
+    paper_bgcolor: "#343a40",           //background color of the whole plot
     colorway: ["#1f77b4", "#ff0e0e"]    //color of the dots for satellites and for our location (in that order)
 
 };
@@ -83,7 +90,7 @@ function resetAll() {
                 color: 'rgba(40, 40, 40, 0.14)',
                 width: 0.5
             },
-            opacity: 0.8
+            opacity: 0.6
         }
     }
 
