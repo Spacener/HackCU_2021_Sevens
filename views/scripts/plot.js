@@ -12,7 +12,7 @@ var satcount = 0;
 
 function formArrayFromObj(inData) {
     for(let i in inData) {
-        if(inData[i][2] < 100000000000) {
+        if (inData[i][2] < 100000000000) {
             scatterSatData['x'].push(inData[i][0]);
             scatterSatData['y'].push(inData[i][1]);
             scatterSatData['z'].push(inData[i][2]);
@@ -22,6 +22,7 @@ function formArrayFromObj(inData) {
         dmapboxSatData['lon'] = scatterSatData['y'];
         dmapboxSatData['lat'] = scatterSatData['x'];
         dmapboxSatData['z'] = 1;
+    }
     satcount = scatterSatData['x'].length;
 }
 
