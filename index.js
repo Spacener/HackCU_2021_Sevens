@@ -95,9 +95,3 @@ const run = http.listen(PORT, () => {
     console.log("server is running!");
 })
 
-
-
-app.get('/aboutus', function(req, res) {
-    res.sendFile('views/aboutus.html', {root: __dirname })
-});
-

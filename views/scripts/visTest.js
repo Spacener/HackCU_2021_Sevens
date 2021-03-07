@@ -7,7 +7,7 @@ var graph = null;
 
 function formArrayFromObj(inData) {
     for(let i in inData) {
-        if(inData[i][2] < 500000000000000000000000000000000000000000000000) {
+        if(inData[i][2] < 5e47) {
             data.add({x: inData[i][0], y: inData[i][1], z: inData[i][2]})
         }
     }

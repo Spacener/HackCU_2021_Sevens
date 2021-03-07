@@ -124,9 +124,11 @@ function drawPlot() {
     var myPlot = document.getElementById('graph');
     Plotly.newPlot('graph', [scatterSatData, scatterUserLocation], layout)
     Plotly.newPlot('heatmap', [dmapboxSatData, dmapboxUserLocation], layout1);
+    $("#graph-objs").fadeIn("slow"); // fade them in when they're done drawing
 }
 
 socket.on('satellite data array', function(data){
+
     resetAll();
     scatterUserLocation['x'].push(userLat);
     scatterUserLocation['y'].push(userLong);
@@ -138,5 +140,6 @@ socket.on('satellite data array', function(data){
 })
 
 function sendData() {
+    $("#initial").fadeOut("slow"); // fade out inital text to prepare for graphs
     socket.emit('data requested')
 }

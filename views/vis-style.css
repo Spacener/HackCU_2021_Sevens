@@ -1,0 +1,28 @@
+body{
+    background-color: #1e1e1e;
+}
+
+.head-primary{
+    font-family: itc-avant-garde-gothic-pro,sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 5em;
+    letter-spacing: 4px;
+
+}
+.card1{
+    margin-right:20px;
+}
+.card2{
+    margin-left:20px;
+}
+.title{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+#graph-objs{
+    display:none;
+}
+
