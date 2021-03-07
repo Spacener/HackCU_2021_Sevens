@@ -18,12 +18,11 @@ function formArrayFromObj(inData) {
             scatterSatData['z'].push(inData[i][2]);
             scatterSatData['text'].push(inData[i][3]);
             dmapboxSatData['text'].push(inData[i][3]);
-            satcount++;
         }
         dmapboxSatData['lon'] = scatterSatData['y'];
         dmapboxSatData['lat'] = scatterSatData['x'];
         dmapboxSatData['z'] = 1;
-    }
+    satcount = scatterSatData['x'].length;
 }
 
 var layout = {
