@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4697eec8-6dae-4412-96d5-da9a383208e3" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/views/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/particles.json" beforeDir="false" afterPath="$PROJECT_DIR$/particlesjs.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +51,7 @@
       <recent name="$PROJECT_DIR$" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/images" />
     </key>
   </component>
