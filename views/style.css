@@ -5,30 +5,10 @@ body{
     background-color: rgb(88,88,88);
 }
 
-#content-1{
-     !important;
-
-
+.title{
+    overflow: auto;
 }
 
-.panel {
-    font-family: 'Source Sans Pro';
-    font-size: 1.3em;
-    color: white !important;
-    position: relative;
-    text-align:center;
-    clear:both;
-    width: 200px;
-    height: 220px;
-    background: #eee;
-    top: 50%;
-    left: 50%;
-    margin: -110px 0 0 -100px;
-    padding: 20px;
-    border-radius: 4px;
-    box-sizing: border-box;
-    z-index: 100;
-}
 
 .box{
     border:1px solid red;
