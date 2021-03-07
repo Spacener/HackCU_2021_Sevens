@@ -8,6 +8,8 @@ var dmapboxSatData;
 
 var dmapboxUserLocation;
 
+var satcount = 0;
+
 function formArrayFromObj(inData) {
     for(let i in inData) {
         if(inData[i][2] < 100000000000) {
@@ -16,6 +18,7 @@ function formArrayFromObj(inData) {
             scatterSatData['z'].push(inData[i][2]);
             scatterSatData['text'].push(inData[i][3]);
             dmapboxSatData['text'].push(inData[i][3]);
+            satcount++;
         }
         dmapboxSatData['lon'] = scatterSatData['y'];
         dmapboxSatData['lat'] = scatterSatData['x'];
@@ -139,7 +142,3 @@ socket.on('satellite data array', function(data){
     drawPlot();
 })
 
-function sendData() {
-    $("#initial").fadeOut("slow"); // fade out inital text to prepare for graphs
-    socket.emit('data requested')
-}

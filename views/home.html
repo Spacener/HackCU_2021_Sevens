@@ -74,7 +74,7 @@
             </div>
             <hr>
             <p class="align-middle">
-                Satellite polution is one of today's growing concerns,
+                Satellite pollution is one of today's growing concerns,
                 with more than 6,000 trackable objects to date. Because they can't
                 be discarded they collide, reflect light on the Earth's surface,
                 and cause other problems.
@@ -88,7 +88,7 @@
 
             <hr>
             <p>
-                Amatuer astronomers, stargazers, and astrophotographers are all
+                Amateur astronomers, stargazers, and astro-photographers are all
                 concerned. Satellite "flare" can leave streaks on long-exposure
                 images, needlessly reflect light onto the Earth's surface, and
                 interfere with scientific research,
@@ -104,7 +104,7 @@
             <hr>
             <p class="align-middle">
                 Are you curious about the satellites currently in your area?
-                You are in the right place! Click below to get information on
+                You are in the right place! Click above to get information on
                 satellites blocking your viewing of the cosmos!
             </p>
         </div>
@@ -219,23 +219,6 @@
 
 <div class="container-fluid pt-2" style="height:100px;"></div>
 
-<script>
-    var x = document.getElementById("demo");
-
-    function getLocation() {
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(showPosition);
-        } else {
-            x.innerHTML = "Geolocation is not supported by this browser.";
-        }
-    }
-
-    function showPosition(position) {
-        x.innerHTML = "Your Current Position: <br>Latitude: " + position.coords.latitude +
-            "<br>Longitude: " + position.coords.longitude;
-    }
-</script>
-</div>
 
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.19.2/dist/tsparticles.min.js"></script>
 <script src="scripts/background.js"></script>

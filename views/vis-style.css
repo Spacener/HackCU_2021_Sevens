@@ -10,11 +10,9 @@ body{
     letter-spacing: 4px;
 
 }
-.card1{
-    margin-right:20px;
-}
-.card2{
-    margin-left:20px;
+
+#dataButton{
+    display:none;
 }
 .title{
     position: absolute;

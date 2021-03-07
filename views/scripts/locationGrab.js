@@ -12,12 +12,17 @@ function getLocation() {
 }
 
 function showPosition(position) {
-    document.getElementById('info-text').innerHTML = 'we are ready to go, hit "send data" to start crunching the numbers';
     userLat = position.coords.latitude;
     userLong = position.coords.longitude;
+    document.getElementById('info-text').innerHTML = "location obtained! crunching numbers..."
     document.getElementById('dataButton').disabled = false;
     if(userLong !== 0 && userLat !== 0) {
         // console.log(userLat + " " + userLong + "543534")
         socket.emit('locationSent', [userLong, userLat]);
+        sendData();
     }
+}
+function sendData() {
+    $("#initial").fadeOut("slow"); // fade out inital text to prepare for graphs
+    socket.emit('data requested')
 }
