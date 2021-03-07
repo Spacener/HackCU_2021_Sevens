@@ -41,10 +41,6 @@ body{
 .info-card {
     transition: all 0.2s ease-in-out !important;
     border-radius: 15px;
-    &:hover{
-         transform: translateY(-5px);
-         box-shadow: none;
-     }
 }
 
 .aboutus-card{
