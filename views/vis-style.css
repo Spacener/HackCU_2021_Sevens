@@ -10,7 +10,9 @@ body{
     letter-spacing: 4px;
 
 }
-
+#home{
+    /*float: right;*/
+}
 #dataButton{
     display:none;
 }
