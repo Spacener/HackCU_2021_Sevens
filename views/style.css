@@ -37,18 +37,15 @@ body{
 }
 
 .info-card {
+    font-family: "Verdana";
     transition: all 0.2s ease-in-out !important;
     border-radius: 15px;
-    &:hover{
-         transform: translateY(-5px);
-         box-shadow: none;
-     }
 }
 
 .aboutus-card{
-
+    font-family: "Verdana";
     background-color: #4158D0;
-    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+    background-image: linear-gradient(43deg, rgb(160, 160, 160), rgb(250, 250, 250));
     height: 300px;
 
     transition: all 0.2s ease-in-out !important;

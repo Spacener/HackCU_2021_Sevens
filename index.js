@@ -34,6 +34,7 @@ io.on('connection', function(socket) {
 
     socket.on('locationSent', function(userLocation) {
         console.log('user sent location')
+        console.log(userLocation)
         userLong = userLocation[0];
         userLat = userLocation[1];
     })
@@ -42,7 +43,7 @@ io.on('connection', function(socket) {
     socket.on('data requested', function() {
         console.log("data has been requested")
         let observer_lat, observer_lng, observer_alt, search_radius, category_id;
-
+        console.log(userLat + " " + userLong)
         observer_lat = userLat;
         observer_lng = userLong;
         observer_alt = 0;
