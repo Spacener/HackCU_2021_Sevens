@@ -30,14 +30,6 @@ body{
     z-index: 100;
 }
 
-.box{
-    border:1px solid red;
-    position:absolute;
-    width:20px;
-    height:20px;
-    z-index: 10;
-}
-
 .container-fluid {
     padding:0;
     margin-right:auto;
