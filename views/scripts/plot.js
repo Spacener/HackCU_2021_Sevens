@@ -1,9 +1,5 @@
 var socket = io();
 
-var satData = {};
-
-
-
 var scatterSatData;
 
 var scatterUserLocation;
@@ -46,7 +42,9 @@ var layout = {
         yaxis: {
             title: 'Latitude'
         }
-    }
+    },
+    paper_bgcolor: "#aeaeae",           //background color of the whole plot
+    colorway: ["#1f77b4", "#ff0e0e"]    //color of the dots for satellites and for our location (in that order)
 
 };
 
@@ -87,7 +85,6 @@ function resetAll() {
         text: ['Your location', 'test'],
         mode: 'markers',
         hoverinfo: "text",
-        surfacecolor: 'rgb(255,0,0)',
         marker: {
             symbol: 'circle',
             size: 3,
@@ -107,7 +104,7 @@ function resetAll() {
         hoverinfo: 'lat+lon',
         radius: 15,
         autocolorscale: false,
-        // colorscale: [[0, 'rgba(0,255,0,5)'], [1,'rgb(126,201,216)']],
+        // colorscale: [[0, 'rgba(0,255,0,5)'], [1,'rgb(126,201,216)']],        //color scale for the heatmap. 0 is outer color, 1 is inner
         showscale: false
     };
 
@@ -119,20 +116,18 @@ function resetAll() {
         hoverinfo: "name",
         radius: 30,
         showscale: false
-        //colorscale: [[0, 'rgb(0,255,0)'], [1, 'rgb(0,255,0)']]
+        //colorscale: [[0, 'rgb(0,255,0)'], [1, 'rgb(0,255,0)']]            //color scale for the heatmap. 0 is outer color, 1 is inner
     }
 }
 
 function drawPlot() {
     var myPlot = document.getElementById('graph');
-    // console.log([ourLocation])
     Plotly.newPlot('graph', [scatterSatData, scatterUserLocation], layout)
     Plotly.newPlot('heatmap', [dmapboxSatData, dmapboxUserLocation], layout1);
 }
 
 socket.on('satellite data array', function(data){
     resetAll();
-    // console.log(userLat + " " + userLong)
     scatterUserLocation['x'].push(userLat);
     scatterUserLocation['y'].push(userLong);
     dmapboxUserLocation['lat'].push(userLat);
