@@ -10,7 +10,7 @@ var dmapboxUserLocation;
 
 var sat_count = 0;
 
-var sat_light = 0
+var sat_light = 0;
 
 function formArrayFromObj(inData) {
     for(let i in inData) {
@@ -141,7 +141,7 @@ function resetAll() {
 
 function drawPlot() {
     sat_light = sat_count * 2.5
-    document.getElementsByClassName('sat_count').innerHTML = sat_count
+    document.getElementById('sat_count').innerHTML = sat_count
     // document.getElementsByClassName('sat_light').innerHTML = sat_light
 
     var myPlot = document.getElementById('graph');
