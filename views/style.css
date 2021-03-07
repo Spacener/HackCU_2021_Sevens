@@ -1,6 +1,4 @@
-overlay {
-    z-index: 2;
-}
 
-underlay{
+#overlay {
+    z-index: 2;
 }
