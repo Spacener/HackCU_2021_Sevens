@@ -36,23 +36,25 @@ body{
 
 }
 
+.info-card {
+    transition: all 0.2s ease-in-out !important;
+    border-radius: 15px;
+    &:hover{
+         transform: translateY(-5px);
+         box-shadow: none;
+     }
+}
 
-.card-1{
+.aboutus-card{
+
     background-color: #4158D0;
     background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
-}
+    height: 300px;
 
-.card-2{
-    background-color: #0093E9;
-    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
-}
-
-.card-3{
-    background-color: #00DBDE;
-    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
-}
-
-.card-4{
-    background-color: #FBAB7E;
-    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+    transition: all 0.2s ease-in-out !important;
+    border-radius: 15px;
+    &:hover{
+         transform: translateY(-5px);
+         box-shadow: none;
+    }
 }
