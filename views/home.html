@@ -61,7 +61,7 @@
 
 
 
-<div class="container-fluid content-1" style="background-color: rgb(120, 120, 120)">
+<div class="container-fluid pt-3 content-1" style="background-color: rgb(120, 120, 120)">
 
     <!--    <button onclick="getLocation()">-->
     <!--        <p>Get Started</p>-->
@@ -71,6 +71,11 @@
 
         <div class="card ml-5 mr-3">
             <div class="card-body" style="background-color: rgb(220, 220, 220)">
+
+                <div class="mt-1" style="display: flex; justify-content: center">
+                    <img src="../images/satellite.svg" height="40%" width="40%">
+                </div>
+
                 <hr/>
                 <p>
                     Satellite Polution is a growing topic of concern in today's world,
@@ -82,18 +87,30 @@
 
         <div class="card ml-3 mr-3">
             <div class="card-body" style="background-color: rgb(220, 220, 220)">
+
+                <div class="mt-1" style="display: flex; justify-content: center">
+                    <img src="../images/telescope.svg" height="40%" width="40%">
+                </div>
+
                 <hr/>
                 <p>
-                    Amatuer astronomers, stargazers, and astrophotographers are all concerned about this increasing quantity: but are they inherently obstructive?
+                    Amatuer astronomers, stargazers,
+                    and astrophotographers are all concerned about this increasing quantity: but are they inherently obstructive?
                     Satellites can interfere with scientific research, leave streaks on long-exposure images, and needlessly reflect
                     light onto the Earth's surface.
                 </p>
             </div>
         </div>
 
-        <div class="card ml-3 mr-3">
+        <div class="card ml-3 mr-5">
             <div class="card-body" style="background-color: rgb(220, 220, 220)">
                 <hr>
+
+                <div class="mt-1" style="display: flex; justify-content: center">
+                    <img src="../images/people.svg" height="40%" width="40%">
+                </div>
+
+                <hr/>
                 <p>
                     Are you curious about the satellites currently in your area?
                     You are in the right place! Click below to get information on satellites blocking your viewing the cosmos!
@@ -101,13 +118,55 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="container-fluid pt-3" style=    "background:transparent url('../images/Geely_Sat.jpg')
+                                            no-repeat center center /cover; height:700px;">
 
     <p id="demo"></p>
-<!--    <img src= "../images/Geely_Sat.jpg" height="1050px" width="100px">-->
+    <!--    <img class="mb-3" src= "../images/Geely_Sat.jpg" height="25%" width="25%">-->
 
 </div>
 <!-- A grey horizontal navbar that becomes vertical on small screens -->
 
+<div class="container-fluid pt-3" style="background-color: rgb(220, 220, 220);">
+
+    <h1 class="mt-5">Bootstrap 4 Horizontal Scrolling</h1>
+    <p class="subtitle">Horizontal scrolling without CSS. Just copy scrolling wrapper classes</p>
+    <div class="scrolling-wrapper row flex-row flex-nowrap mt-4 pb-4 pt-2" style="overflow-x: auto;">
+
+        <div class="col-5 ml-4">
+            <div class="card card-block card-1" style="height: 300px;"></div>
+        </div>
+        <div class="col-5">
+            <div class="card card-block card-2"></div>
+        </div>
+        <div class="col-5">
+            <div class="card card-block card-3"></div>
+        </div>
+        <div class="col-5">
+            <div class="card card-block card-4"></div>
+        </div>
+        <div class="col-5">
+            <div class="card card-block card-5"></div>
+        </div>
+        <div class="col-5">
+            <div class="card card-block card-6"></div>
+        </div>
+        <div class="col-5">
+            <div class="card card-block card-7"></div>
+        </div>
+        <div class="col-5">
+            <div class="card card-block card-8"></div>
+        </div>
+        <div class="col-5">
+            <div class="card card-block card-9"></div>
+        </div>
+        <div class="col-5">
+            <div class="card card-block card-10"></div>
+        </div>
+    </div>
+</div>
 
 <script>
     var x = document.getElementById("demo");
@@ -128,8 +187,6 @@
 </div>
 
 <script src="https://cdn.jsdelivr.net/npm/tsparticles@1.19.2/dist/tsparticles.min.js"></script>
-
-
 <script src="scripts/background.js"></script>
 
 </body>

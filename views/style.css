@@ -1,12 +1,5 @@
 body{
-    background-color:rgb(80,80,80);
-    overflow-x: hidden;
-    margin:0;
-    min-width:100%;
-
-}
-.content-1{
-    min-width:100vh;
+    background-color:rgb(80,80,80)
 }
 #particles-js{
     z-index:-1;
@@ -41,4 +34,25 @@ body{
     margin-right:auto;
     margin-left:auto;
 
+}
+
+
+.card-1{
+    background-color: #4158D0;
+    background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+}
+
+.card-2{
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+
+.card-3{
+    background-color: #00DBDE;
+    background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+}
+
+.card-4{
+    background-color: #FBAB7E;
+    background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
 }
