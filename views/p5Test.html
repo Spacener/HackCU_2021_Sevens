@@ -3,18 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>p5Test</title>
-<!--    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>-->
-    <script src="https://unpkg.com/vis-graph3d@latest/dist/vis-graph3d.min.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="/scripts/locationGrab.js"></script>
-<!--    <script src="/scripts/processingTest.js"></script>-->
-    <script src="/scripts/visTest.js"></script>
+
 </head>
 <body>
 
-<div id="myGraph"></div>
+<div id="graph" style="width: 800px;height: 800px;"></div>
+
+<div id="heatmap" style="width: 800px;height: 800px;"></div>
 
 <button onclick="getLocation()">Gather Location Data</button>
 <button type="button" onclick="sendData()">Send Data</button>
+
+
+
+    <!--    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>-->
+    <!--    <script src="https://unpkg.com/vis-graph3d@latest/dist/vis-graph3d.min.js"></script>-->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/scripts/locationGrab.js"></script>
+    <!--    <script src="/scripts/processingTest.js"></script>-->
+    <!--    <script src="/scripts/visTest.js"></script>-->
+    <script src="scripts/plot.js"></script>
 </body>
 </html>
