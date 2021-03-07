@@ -14,6 +14,7 @@ function getLocation() {
 function showPosition(position) {
     userLat = position.coords.latitude;
     userLong = position.coords.longitude;
+    document.getElementById('locButton').disabled = true;
     document.getElementById('info-text').innerHTML = "location obtained! crunching numbers..."
     document.getElementById('dataButton').disabled = false;
     if(userLong !== 0 && userLat !== 0) {
