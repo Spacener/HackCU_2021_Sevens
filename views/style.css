@@ -15,7 +15,6 @@ body{
     font-family: 'Source Sans Pro';
     font-size: 1.3em;
     position: absolute;
-    z-index: 10;
     width: 200px;
     height: 220px;
     background: #eee;
