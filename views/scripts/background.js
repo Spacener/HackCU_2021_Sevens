@@ -8,6 +8,10 @@ tsParticles.load("particles-js",
             "repeat": "no-repeat",
             "size": "cover"
         },
+        "fullScreen": {
+            "enable": true,
+            "zIndex": -1
+        },
         "particles": {
             "number": {
                 "value": 100,
