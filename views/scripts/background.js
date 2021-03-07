@@ -1,5 +1,13 @@
-particlesJS("particles-js",
+tsParticles.load("particles-js",
     {
+        "background": {
+            "color": {
+                "value": "#1e1e1e"
+            },
+            "position": "fixed",
+            "repeat": "no-repeat",
+            "size": "cover"
+        },
         "particles": {
             "number": {
                 "value": 100,
@@ -19,11 +27,6 @@ particlesJS("particles-js",
                 },
                 "polygon": {
                     "nb_sides": 5
-                },
-                "image": {
-                    "src": "img/github.svg",
-                    "width": 100,
-                    "height": 100
                 }
             },
             "opacity": {
