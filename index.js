@@ -61,17 +61,19 @@ io.on('connection', function(socket) {
             // pull lat and long
             console.log("Length:" + response.info.satcount);
             const count = response.info.satcount;
-            let coordsToRespondWith = {};
+            let raw_data = {};
             console.time("processing satellite data");
             for(let i = 0; i < count; ++i){
                 let coord_set = [];
                 coord_set.push(response.above[i].satlat);
                 coord_set.push(response.above[i].satlng);
                 coord_set.push(response.above[i].satalt);
-                coordsToRespondWith.push(coord_set);
+                coord_set.push(response.above[i].satname);
+
+                raw_data[(response.above[i].satlat+response.above[i].satlng).toString()]=coord_set;
             }
             console.timeEnd("processing satellite data")
-            socket.emit('satellite data array', coordsToRespondWith);
+            socket.emit('satellite data array', raw_data);
         })
     })
 })
