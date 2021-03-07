@@ -43,7 +43,7 @@
 
 
 <!--</nav>-->
-<div class="container-fluid particles" style="background-color: rgb(80,80,80)">
+<div class="container-fluid particles" style="background-color: rgb(30,30,30)">
     <div id="particles-js">
     </div>
 </div>
@@ -61,7 +61,7 @@
             light onto the Earth's surface. <br><br>
             Are you curious about the satellites currently in your area?
             You are in the right place! Click below to get information on satellites blocking your viewing the cosmos!
-            </p></div>
+        </p></div>
     </div>
     <p>Would you like to send your location data?</p>
 
@@ -73,22 +73,22 @@
 <!-- A grey horizontal navbar that becomes vertical on small screens -->
 
 
-    <script>
-        var x = document.getElementById("demo");
+<script>
+    var x = document.getElementById("demo");
 
-        function getLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(showPosition);
-            } else {
-                x.innerHTML = "Geolocation is not supported by this browser.";
-            }
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+        } else {
+            x.innerHTML = "Geolocation is not supported by this browser.";
         }
+    }
 
-        function showPosition(position) {
-            x.innerHTML = "Your Current Position: <br>Latitude: " + position.coords.latitude +
-                "<br>Longitude: " + position.coords.longitude;
-        }
-    </script>
+    function showPosition(position) {
+        x.innerHTML = "Your Current Position: <br>Latitude: " + position.coords.latitude +
+            "<br>Longitude: " + position.coords.longitude;
+    }
+</script>
 </div>
 
 <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
