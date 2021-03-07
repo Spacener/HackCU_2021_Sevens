@@ -28,27 +28,36 @@
         </div>
     </div>
 
+
+
     <div class="container" id="graph-objs">
         <h1 class="head-primary text-center graph-announce text-white">here's what we found</h1>
         <div class="row">
             <div class="col">
             <div class="card text-white bg-dark text-center card1">
                 <div class="card-body">
-                    <h1>what's above</h1>
-                    <hr>
-                    <div id="graph" style="width: 450px;height: 450px; display:inline-block;"></div>
-                    <hr>
-                    <div class="card-text">Content goes here</div>
+                    <h1>
+                        There are <b inner-html="Sat_Count_Goes_Here"> </b> satelittes above you right now.
+                        <br>
+                        Is it satellite hour? In 5 minutes, you could see as many as <b inner-html="Sat_Count"> </b> satelittes tonight.
+                        <br>
+                        Worried about a photo-bomb?
                 </div>
             </div>
             </div>
-            <div class="col">
+        </div>
+        <div class="col">
             <div class="card text-white bg-dark text-center card2">
                 <div class="card-body">
-                    <h1>concentrations</h1>
+                    <div id="heatmap" style="width: 400px;height: 400px;display:inline-block;"></div>
                     <hr>
-                    <div id="heatmap" style="width: 450px;height: 450px;display:inline-block;"></div>                    <hr>
-                    <div class="card-text">Content goes here</div>
+                    <div class="card-text">
+                        There are <b inner-html="Sat_Count_Goes_Here"> </b> satellites per square mile
+                        <br>
+                        Is it satellite hour? In 5 minutes, you could see as many as <b inner-html="Sat_Count"> </b> satelittes tonight.
+                        <br>
+                        Worried about a photo-bomb?
+                    </div>
                 </div>
             </div>
         </div>
