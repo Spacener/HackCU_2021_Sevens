@@ -45,14 +45,20 @@
 <!--</nav>-->
 <div class="container-fluid particles" style="background-color: rgb(30,30,30)">
     <div id="particles-js">
+        <div class="box middle center">START HERE</div>
     </div>
 </div>
 
 
-<div class="container-fluid pt-3 content-1" style="background-color: #03a9f4">
+<div class="container-fluid pt-3 content-1" style="background-color: #D3D3D3">
     <div class="d-flex justify-content-center">
         <h1 id="colortag">Home Page</h1>
     </div>
+
+    <div onclick="getLocation()">
+        <p>Get Started</p>
+    </div>
+
     <div class="card" style="background-color: rgb(190,190,190)">
         <div class="card-body"><p>Satellite Polution is a growing topic of concern in today's world,
             with more than 6,000 orbiting artificial entities. Amatuer astronomers, stargazers,
@@ -63,9 +69,6 @@
             You are in the right place! Click below to get information on satellites blocking your viewing the cosmos!
         </p></div>
     </div>
-    <p>Would you like to send your location data?</p>
-
-    <button onclick="getLocation()">Get Started</button>
 
     <p id="demo"></p>
     <img src= "../images/Geely_Sat.jpg" height="1050px" width="1400px">
