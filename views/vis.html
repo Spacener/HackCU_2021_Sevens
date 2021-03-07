@@ -19,79 +19,70 @@
     <link rel="stylesheet" href="vis-style.css" type="text/css">
 </head>
 <body>
-    <div class="container" id="initial">
-        <div class="title text-center text-white">
-            <h1 class="head-primary">let's see the skies</h1>
-            <p id="info-text">in order to reveal what's in your sky, we need your location.</p>
-            <button id="locButton" type="button" class="btn btn-dark" onclick="getLocation()">reveal the skies</button>
-            <button id="dataButton" type="button" class="btn btn-dark" onclick="sendData()" disabled>Send Data</button>
-        </div>
+<div class="container" id="initial">
+    <div class="title text-center text-white">
+        <h1 class="head-primary">let's see the skies</h1>
+        <p id="info-text">in order to reveal what's in your sky, we need your location.</p>
+        <button id="locButton" type="button" class="btn btn-dark" onclick="getLocation()">reveal the skies</button>
+        <button id="dataButton" type="button" class="btn btn-dark" onclick="sendData()" disabled>Send Data</button>
     </div>
+</div>
 
-
-
-    <div class="container" id="graph-objs">
-        <h1 class="head-primary text-center graph-announce text-white">here's what we found</h1>
-        <div class="row">
-            <div class="col">
+<div class="container" id="graph-objs">
+    <h1 class="head-primary text-center graph-announce text-white">here's what we found</h1>
+    <div class="row">
+        <div class="col">
             <div class="card text-white bg-dark text-center card1">
                 <div class="card-body">
-                    <h1>
-                        There are <b inner-html="Sat_Count_Goes_Here"> </b> satelittes above you right now.
-                        <br>
-                        Is it satellite hour? In 5 minutes, you could see as many as <b inner-html="Sat_Count"> </b> satelittes tonight.
-                        <br>
-                        Worried about a photo-bomb?
+                    <h1>what's above</h1>
+                    <hr>
+                    <div id="graph" style="width: 450px;height: 450px; display:inline-block;"></div>
+                    <hr>
+                    <div class="card-text">Content goes here</div>
                 </div>
-            </div>
             </div>
         </div>
         <div class="col">
             <div class="card text-white bg-dark text-center card2">
                 <div class="card-body">
-                    <div id="heatmap" style="width: 400px;height: 400px;display:inline-block;"></div>
+                    <h1>concentrations</h1>
                     <hr>
-                    <div class="card-text">
-                        There are <b inner-html="Sat_Count_Goes_Here"> </b> satellites per square mile
-                        <br>
-                        Is it satellite hour? In 5 minutes, you could see as many as <b inner-html="Sat_Count"> </b> satelittes tonight.
-                        <br>
-                        Worried about a photo-bomb?
-                    </div>
+                    <div id="heatmap" style="width: 450px;height: 450px;display:inline-block;"></div>                    <hr>
+                    <div class="card-text">Content goes here</div>
                 </div>
             </div>
         </div>
-        </div>
-        <hr>
-        <div class="row">
-<!--            <div class="col-3"></div>-->
-            <div class="col-12">
-                <div class="card text-white bg-dark text-center card2">
-                    <div class="card-body">
-                        <hr>
-                        <div class="card-text">Content goes here</div>
-                    </div>
+    </div>
+    <hr>
+    <div class="row">
+        <!--            <div class="col-3"></div>-->
+        <div class="col-12">
+            <div class="card text-white bg-dark text-center card2">
+                <div class="card-body">
+                    <hr>
+                    <div class="card-text">Content goes here</div>
                 </div>
             </div>
-<!--            <div class="col-3"></div>-->
         </div>
-
-
-
+        <!--            <div class="col-3"></div>-->
     </div>
 
 
 
+</div>
 
 
 
-    <!--    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>-->
-    <!--    <script src="https://unpkg.com/vis-graph3d@latest/dist/vis-graph3d.min.js"></script>-->
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="/scripts/locationGrab.js"></script>
-    <!--    <script src="/scripts/processingTest.js"></script>-->
-    <!--    <script src="/scripts/visTest.js"></script>-->
-    <script src="scripts/plot.js"></script>
+
+
+
+<!--    <script src="https://cdn.jsdelivr.net/npm/p5@1.2.0/lib/p5.js"></script>-->
+<!--    <script src="https://unpkg.com/vis-graph3d@latest/dist/vis-graph3d.min.js"></script>-->
+<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/scripts/locationGrab.js"></script>
+<!--    <script src="/scripts/processingTest.js"></script>-->
+<!--    <script src="/scripts/visTest.js"></script>-->
+<script src="scripts/plot.js"></script>
 </body>
 </html>
