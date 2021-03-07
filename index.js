@@ -16,7 +16,9 @@ app.use(express.static(path.join(__dirname,"views")))
 app.get('/home', function(req, res) {
     res.sendFile('views/home.html', {root: __dirname })
 });
-
+app.get('/vis', function(req,res){
+    res.sendFile('views/vis.html', {root: __dirname })
+})
 app.get('/', function(req,res){
     res.sendFile('views/home.html', {root: __dirname })
 })
@@ -24,7 +26,7 @@ app.get('/socket.io/socket.io.js', (req,res)=>{
     res.sendFile('node_modules/socket.io/client-dist/socket.io.js',{root: __dirname });
 })
 app.get('/test', function(req,res){
-    res.redirect('p5Test.html')
+    res.redirect('vis.html')
 })
 
 io.on('connection', function(socket) {

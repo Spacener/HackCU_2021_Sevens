@@ -1,13 +1,17 @@
 body{
-    background-color:rgb(80,80,80)
+    background-color:rgb(80,80,80);
+    position: absolute;
 }
-#particles-js{
-    z-index:-1;
+#particles-js {
+    max-width: 100%;
+    height: 100%;
 }
 .container{
     position: relative;
+    width:100vw;
     height: 100vh;
-
+    top:0;
+    left:0;
 }
 .title{
     position: absolute;
@@ -28,7 +32,6 @@ body{
     margin-top:-38px;
 }
 
-
 .container-fluid {
     padding:0;
     margin-right:auto;
@@ -40,6 +43,11 @@ body{
     font-family: "Verdana";
     transition: all 0.2s ease-in-out !important;
     border-radius: 15px;
+
+}
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: none;
 }
 
 .aboutus-card{
@@ -50,8 +58,9 @@ body{
 
     transition: all 0.2s ease-in-out !important;
     border-radius: 15px;
-    &:hover{
-         transform: translateY(-5px);
-         box-shadow: none;
-    }
+
+}
+.aboutus-card:hover{
+    transform: translateY(-5px);
+    box-shadow: none;
 }
