@@ -46,6 +46,7 @@ var layout = {
             title: 'Latitude'
         }
     },
+    showlegend: false,
     paper_bgcolor: "#aeaeae",           //background color of the whole plot
     colorway: ["#1f77b4", "#ff0e0e"]    //color of the dots for satellites and for our location (in that order)
 
@@ -54,6 +55,12 @@ var layout = {
 
 
 var layout1 = {
+    margin: {
+        l: 0,
+        r: 0,
+        b: 0,
+        t: 0,
+    },
     mapbox: {
         style: 'stamen-terrain'
     }
