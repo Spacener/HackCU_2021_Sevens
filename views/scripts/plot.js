@@ -141,8 +141,8 @@ function resetAll() {
 
 function drawPlot() {
     sat_light = sat_count * 2.5
-    document.getElementById('sat_count').innerHTML = sat_count
-    document.getElementById('sat_light').innerHTML = sat_light
+    document.getElementsByClassName('sat_count').innerHTML = sat_count
+    // document.getElementsByClassName('sat_light').innerHTML = sat_light
 
     var myPlot = document.getElementById('graph');
     Plotly.newPlot('graph', [scatterSatData, scatterUserLocation], layout)
