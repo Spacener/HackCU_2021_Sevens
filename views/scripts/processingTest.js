@@ -26,6 +26,7 @@ var satData = [];
 
 socket.on('satellite data array', function(data){
     // whatever
+    console.log(data)
     satData = data;
 })
 

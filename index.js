@@ -15,7 +15,6 @@ app.use(express.static(path.join(__dirname,"views")))
 
 app.get('/home', function(req, res) {
     res.sendFile('views/home.html', {root: __dirname })
-
 });
 
 app.get('/', function(req,res){
@@ -34,8 +33,8 @@ io.on('connection', function(socket) {
         console.log("data has been requested")
         let observer_lat, observer_lng, observer_alt, search_radius, category_id;
 
-        observer_lat = 41.702;
-        observer_lng = -76.014;
+        observer_lat = 39.9987588;
+        observer_lng = -105.2514308;
         observer_alt = 0;
         search_radius = 70;
         category_id = 0;
@@ -58,12 +57,20 @@ io.on('connection', function(socket) {
             if (resa.error) throw new Error(resa.error);
             response = resa.body;
 
-            let myReturn = [];
-
             // const ResponseAsJson = JSON.parse(response)
-
+            // pull lat and long
             console.log("Length:" + response.info.satcount);
-            let coordsToRespondWith = [[50,50],[100,100]];
+            const count = response.info.satcount;
+            let coordsToRespondWith = {};
+            console.time("processing satellite data");
+            for(let i = 0; i < count; ++i){
+                let coord_set = [];
+                coord_set.push(response.above[i].satlat);
+                coord_set.push(response.above[i].satlng);
+                coord_set.push(response.above[i].satalt);
+                coordsToRespondWith.push(coord_set);
+            }
+            console.timeEnd("processing satellite data")
             socket.emit('satellite data array', coordsToRespondWith);
         })
     })

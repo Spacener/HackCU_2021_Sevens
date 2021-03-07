@@ -2,7 +2,7 @@
 <html>
 <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-
+<link rel="stylehseet" href="style.css" type="text/css">
 <!-- jQuery library -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
@@ -18,49 +18,59 @@
 
 </head>
 
-<body style="background: grey">
-<nav class="navbar navbar-expand-sm bg-dark">
+<body>
+<!--<nav clasar-expand-sm bg-dark">-->
 
-    <!-- Links -->
-    <ul class="navbar-nav">
-        <li class="nav-item">
-            <a class="nav-link" href="home">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Tracker</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="aboutus">About Us</a>
-        </li>
-    </ul>
-        <ul class= "navbar-nav ml-auto">
-            <a class="navbar-brand" href="#" >
-                <img class="square" src="images/milky_way.jpg" width="50" height="50">
-            </a>
+<!--    &lt;!&ndash; Links &ndash;&gt;-->
+<!--    <ul class="navbar-nav">-->
+<!--        <li class="nav-item">-->
+<!--            <a class="nav-link" href="home">Home</a>-->
+<!--        </li>-->
+<!--        <li class="nav-item">-->
+<!--            <a class="nav-link" href="#">Tracker</a>-->
+<!--        </li>-->
+<!--        <li class="nav-item">-->
+<!--            <a class="nav-link" href="aboutus">About Us</a>-->
+<!--        </li>-->
+<!--    </ul>-->
+<!--        <ul class= "navbar-nav ml-auto">-->
+<!--            <a class="navbar-brand" href="#" >-->
+<!--                <img class="square" src="images/milky_way.jpg" width="50" height="50">-->
+<!--            </a>-->
 
-            <!--github link and logo-->
-        </ul>
-
-
-</nav>
-
-<div id="particles-js">
+<!--            &lt;!&ndash;github link and logo&ndash;&gt;-->
+<!--        </ul>-->
 
 
-    <div class="container pt-3">
-        <h1 id="colortag">Home Page</h1>
-        <div class="card">
-            <div class="card-body"><p>Are you an amatuer astronomer? If so, do you want to know about the satellites obscuring your path? You are in the right place! Click the Gather Location
-                Button below to get information on satellites blocking your way of viewing the cosmos!</p></div>
-        </div>
-        <p>Would you like to send your location data?</p>
-
-        <button onclick="getLocation()">Get Started</button>
-
-        <p id="demo"></p>
-        <img src= "../images/Geely_Sat.jpg" height="1050px" width="1400px">
+<!--</nav>-->
+<div class="container-fluid particles" style="background-color: rgb(80,80,80)">
+    <div id="particles-js">
     </div>
-    <!-- A grey horizontal navbar that becomes vertical on small screens -->
+</div>
+
+
+<div class="container-fluid pt-3 content-1" style="background-color: #03a9f4">
+    <div class="d-flex justify-content-center">
+        <h1 id="colortag">Home Page</h1>
+    </div>
+    <div class="card" style="background-color: rgb(190,190,190)">
+        <div class="card-body"><p>Satellite Polution is a growing topic of concern in today's world,
+            with more than 6,000 orbiting artificial entities. Amatuer astronomers, stargazers,
+            and astrophotographers are all concerned about this increasing quantity–but are they inherently obstructive?
+            Satellites can interfere with scientific research, leave streaks on long-exposure images, and needlessly reflect
+            light onto the Earth's surface. <br><br>
+            Are you curious about the satellites currently in your area?
+            You are in the right place! Click below to get information on satellites blocking your viewing the cosmos!
+            </p></div>
+    </div>
+    <p>Would you like to send your location data?</p>
+
+    <button onclick="getLocation()">Get Started</button>
+
+    <p id="demo"></p>
+    <img src= "../images/Geely_Sat.jpg" height="1050px" width="1400px">
+</div>
+<!-- A grey horizontal navbar that becomes vertical on small screens -->
 
 
     <script>
