@@ -1,6 +1,7 @@
 body{
     background-color:rgb(80,80,80);
     overflow-x: hidden;
+    color: #212529;
 }
 
 .container{
@@ -24,7 +25,7 @@ body{
 }
 
 h4 {
-    font-size: 315%;
+    font-size: 45px;
     font-family: "Verdana";
     font-weight: bold;
 }
