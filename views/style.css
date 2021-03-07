@@ -1,17 +1,20 @@
 body{
     background-color:rgb(80,80,80)
 }
-#particles{
-    background-color: rgb(88,88,88);
+#particles-js{
+    z-index:-1;
 }
 
 .title{
     overflow: auto;
+    position: relative;
+    z-index: 10;
+
 }
 
 
 .container-fluid {
     padding:0;
     margin-right:auto;
-    margin-left:auto
+    margin-left:auto;
 }
