@@ -7,7 +7,9 @@ var data = {
     x: [],
     y: [],
     z: [],
+    text: [],
     mode: 'markers',
+    hoverinfo: "text",
     marker: {
         symbol: 'circle',
         color: 'rgb(127, 127, 127)',
@@ -20,16 +22,27 @@ var data = {
     }
 }
 
+var data1 = {
+    type: 'densitymapbox',
+    lon: [],
+    lat: [],
+    z: [],
+    text: [],
+    hoverinfo: "text"
+};
+
 function formArrayFromObj(inData) {
     for(let i in inData) {
-        if(inData[i][2] < 40000) {
+        if(inData[i][2] < 4000000) {
             data['x'].push(inData[i][0]);
             data['y'].push(inData[i][1]);
             data['z'].push(inData[i][2]);
+            data['text'].push(inData[i][3]);
+            data1['text'].push(inData[i][3]);
         }
-        data1['lon'] = data['y']
-        data1['lat'] = data['x']
-        data1['z'] = 1
+        data1['lon'] = data['y'];
+        data1['lat'] = data['x'];
+        data1['z'] = 1;
     }
 }
 
@@ -46,11 +59,7 @@ var layout = {
     }
 };
 
-var data1 = {
-    type: 'densitymapbox',
-    lon: [],
-    lat: [],
-    z: []};
+
 
 var layout1 = {
     radius: 1,

@@ -28,13 +28,23 @@ app.get('/test', function(req,res){
 })
 
 io.on('connection', function(socket) {
+
+    var userLat = 0;
+    var userLong = 0;
+
+    socket.on('locationSent', function(userLocation) {
+        console.log('user sent location')
+        userLong = userLocation[0];
+        userLat = userLocation[1];
+    })
+
     console.log("client connected! client id: " + socket.id);
     socket.on('data requested', function() {
         console.log("data has been requested")
         let observer_lat, observer_lng, observer_alt, search_radius, category_id;
 
-        observer_lat = 39.9987588;
-        observer_lng = -105.2514308;
+        observer_lat = userLat;
+        observer_lng = userLong;
         observer_alt = 0;
         search_radius = 70;
         category_id = 0;

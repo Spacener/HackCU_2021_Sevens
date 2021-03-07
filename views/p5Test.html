@@ -7,12 +7,14 @@
 </head>
 <body>
 
+<button id="locButton" onclick="getLocation()">Gather Location Data</button>
+<button id="dataButton" type="button" onclick="sendData()" disabled>Send Data</button>
+
 <div id="graph" style="width: 800px;height: 800px;"></div>
 
 <div id="heatmap" style="width: 800px;height: 800px;"></div>
 
-<button onclick="getLocation()">Gather Location Data</button>
-<button type="button" onclick="sendData()">Send Data</button>
+
 
 
 
